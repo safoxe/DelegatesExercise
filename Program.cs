@@ -6,7 +6,13 @@ namespace delegates_repeat
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int minutes, seconds = 0;
+            Console.WriteLine("Enter minutes:");
+            if(Int32.TryParse(Console.ReadLine(), out minutes)) {
+                Console.WriteLine("Enter seconds:");
+                if(Int32.TryParse(Console.ReadLine(), out seconds)){}
+            }
+            var timer = new TimerModel(minutes, seconds);
         }
     }
 }
